@@ -62,3 +62,48 @@ func TestSumOfThreeNumbers(t *testing.T) {
 		})
 	}
 }
+
+func TestContainerWithMostWater(t *testing.T) {
+	type args struct {
+		a []int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		// TODO: Add test cases.
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := ContainerWithMostWater(tt.args.a); got != tt.want {
+				t.Errorf("ContainerWithMostWater() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestProductOfArrayOtherThanItself(t *testing.T) {
+	type args struct {
+		nums []int
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		{
+			name: "valid ",
+			args: args{nums: []int{1, 2, 3, 4, 5}},
+			want: []int{120, 60, 40, 30, 24},
+		},
+		// TODO: Add test cases.
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := ProductOfArrayOtherThanItself(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("ProductOfArrayOtherThanItself() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
